@@ -1,0 +1,77 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pogo-storage-mapper"
+version = "0.2.0"
+description = "Offline Pokemon GO frame scanner for screenshot and screen recording audits."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+authors = [{ name = "WorkOfStan" }]
+dependencies = [
+    "openpyxl>=3.1.5",
+    "Pillow>=11.0.0",
+    "pytesseract>=0.3.13",
+]
+
+[project.optional-dependencies]
+dev = [
+    "build>=1.2.2",
+    "mypy>=1.15.0",
+    "pytest>=8.3.5",
+    "pylint>=3.3.0",
+    "ruff>=0.11.4",
+    "types-openpyxl>=3.1.5.20260408",
+]
+
+[project.scripts]
+pogo-storage-mapper = "pogo_storage_mapper.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+pogo_storage_mapper = ["data/*.json", "data/*.csv"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider --basetemp=.tmp/pytest"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+cache-dir = ".cache/ruff"
+exclude = [
+    ".git",
+    ".venv",
+    "venv",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".pytest-tmp",
+    ".tmp",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "B",
+]
+
+[tool.ruff.format]
+line-ending = "lf"
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[tool.pylint.messages_control]
+disable = [
+    "duplicate-code",
+]

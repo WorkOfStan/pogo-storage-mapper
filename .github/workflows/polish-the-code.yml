@@ -1,0 +1,60 @@
+---
+name: Polish the code
+
+on:
+  push:
+    branches-ignore:
+      # notest branches to ignore testing of partial online commits
+      - "notest/**"
+
+  pull_request:
+    branches-ignore:
+      # notest branches to ignore testing of partial online commits
+      - "notest/**"
+
+  schedule:
+    # Run the workflow at 6:30 AM UTC on the 18th of every month
+    - cron: "30 6 18 * *"
+    # Scheduled runs do not commit-changes automatically to the same branch
+
+permissions:
+  # only prettier-fix and phpcs-phpcbf need write permission, for others read is enough
+  contents: read
+
+jobs:
+  commit-check:
+    runs-on: ubuntu-latest
+    # use permissions because pull-request comments are used
+    permissions:
+      contents: read
+      pull-requests: write
+      # so that it can actually write pr-comments
+      issues: write
+    # Limit the running time
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          # checkout PR HEAD commit
+          ref: ${{ github.event.pull_request.head.sha }}
+          # required for merge-base check
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: commit-check/commit-check-action@v2
+        env:
+          # use GITHUB_TOKEN because use of pr-comments
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          message: true
+          # to accept dependabot/github_actions/*
+          branch: false
+          author-name: true
+          author-email: true
+          job-summary: true
+          pr-comments: ${{ github.event_name == 'pull_request' }}
+
+  super-linter:
+    needs: commit-check
+    uses: WorkOfStan/seablast-actions/.github/workflows/linter.yml@v0.2.11
+    with:
+      runs-on: "ubuntu-latest"

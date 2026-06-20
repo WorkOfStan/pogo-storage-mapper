@@ -1,0 +1,148 @@
+{
+  "samples": [
+    {
+      "frame_index": 0,
+      "file": "frames/frame_000000.jpg",
+      "expected": "list",
+      "sequence": "single"
+    },
+    {
+      "frame_index": 66,
+      "file": "frames/frame_000066.jpg",
+      "expected": "list",
+      "sequence": "single"
+    },
+    {
+      "frame_index": 67,
+      "file": "frames/frame_000067.jpg",
+      "expected": "non_extractable",
+      "sequence": "single"
+    },
+    {
+      "frame_index": 70,
+      "file": "frames/frame_000070.jpg",
+      "expected": "non_extractable",
+      "sequence": "single"
+    },
+    {
+      "frame_index": 71,
+      "file": "frames/frame_000071.jpg",
+      "expected": "detail",
+      "sequence": "single"
+    },
+    {
+      "frame_index": 86,
+      "file": "frames/frame_000086.jpg",
+      "expected": "detail",
+      "sequence": "single"
+    },
+    {
+      "frame_index": 87,
+      "file": "frames/frame_000087.jpg",
+      "expected": "non_extractable",
+      "sequence": "single"
+    },
+    {
+      "frame_index": 100,
+      "file": "frames/frame_000100.jpg",
+      "expected": "non_extractable",
+      "sequence": "single"
+    },
+    {
+      "frame_index": 109,
+      "file": "frames/frame_000109.jpg",
+      "expected": "non_extractable",
+      "sequence": "single"
+    },
+    {
+      "frame_index": 110,
+      "file": "frames/frame_000110.jpg",
+      "expected": "detail",
+      "sequence": "single"
+    },
+    {
+      "frame_index": 153,
+      "file": "frames/frame_000153.jpg",
+      "expected": "detail",
+      "sequence": "swipe_153_166"
+    },
+    {
+      "frame_index": 154,
+      "file": "frames/frame_000154.jpg",
+      "expected": "non_extractable",
+      "sequence": "swipe_153_166"
+    },
+    {
+      "frame_index": 155,
+      "file": "frames/frame_000155.jpg",
+      "expected": "non_extractable",
+      "sequence": "swipe_153_166"
+    },
+    {
+      "frame_index": 156,
+      "file": "frames/frame_000156.jpg",
+      "expected": "non_extractable",
+      "sequence": "swipe_153_166"
+    },
+    {
+      "frame_index": 157,
+      "file": "frames/frame_000157.jpg",
+      "expected": "non_extractable",
+      "sequence": "swipe_153_166"
+    },
+    {
+      "frame_index": 158,
+      "file": "frames/frame_000158.jpg",
+      "expected": "non_extractable",
+      "sequence": "swipe_153_166"
+    },
+    {
+      "frame_index": 159,
+      "file": "frames/frame_000159.jpg",
+      "expected": "non_extractable",
+      "sequence": "swipe_153_166"
+    },
+    {
+      "frame_index": 160,
+      "file": "frames/frame_000160.jpg",
+      "expected": "non_extractable",
+      "sequence": "swipe_153_166"
+    },
+    {
+      "frame_index": 161,
+      "file": "frames/frame_000161.jpg",
+      "expected": "non_extractable",
+      "sequence": "swipe_153_166"
+    },
+    {
+      "frame_index": 162,
+      "file": "frames/frame_000162.jpg",
+      "expected": "non_extractable",
+      "sequence": "swipe_153_166"
+    },
+    {
+      "frame_index": 163,
+      "file": "frames/frame_000163.jpg",
+      "expected": "non_extractable",
+      "sequence": "swipe_153_166"
+    },
+    {
+      "frame_index": 164,
+      "file": "frames/frame_000164.jpg",
+      "expected": "detail",
+      "sequence": "swipe_153_166"
+    },
+    {
+      "frame_index": 165,
+      "file": "frames/frame_000165.jpg",
+      "expected": "detail",
+      "sequence": "swipe_153_166"
+    },
+    {
+      "frame_index": 166,
+      "file": "frames/frame_000166.jpg",
+      "expected": "detail",
+      "sequence": "swipe_153_166"
+    }
+  ]
+}

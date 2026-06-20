@@ -1,0 +1,22 @@
+# Python
+/.venv/
+/.mypy_cache/
+/.pytest_cache/
+/.pytest-local-tmp/
+/.pytest-tmp/
+/.tmp/
+/manual_tmp_check/
+/mode700_check/
+/tmp_pytest_check/
+/.ruff_cache/
+/.cache/
+/build/
+/dist/
+/*.egg-info/
+/src/*.egg-info/
+__pycache__/
+
+# Generated scanner artifacts
+/output/
+
+# Ignore files over 50 MB
